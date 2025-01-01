@@ -1,6 +1,5 @@
 package com.codingshuttle.project.uber.uberApp.strategies.impl;
 
-import com.codingshuttle.project.uber.uberApp.dto.RideRequestDto;
 import com.codingshuttle.project.uber.uberApp.entities.Driver;
 import com.codingshuttle.project.uber.uberApp.entities.RideRequest;
 import com.codingshuttle.project.uber.uberApp.repositories.DriverRepository;
@@ -14,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class DriverMatchingHighestRatedDriverStrategy implements DriverMatchingStrategy {
 
-    private DriverRepository driverRepository;
+    private final DriverRepository driverRepository;
 
     @Override
     public List<Driver> findMatchingDriver(RideRequest rideRequest) {
