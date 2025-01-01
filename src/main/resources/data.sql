@@ -28,12 +28,12 @@ INSERT INTO rider (id, user_id, rating) VALUES
 INSERT INTO driver (id, user_id, rating, available, current_location) VALUES
 (2, 2, 4.7, true, ST_GeomFromText('POINT(75.7923 26.9127)', 4326)),
 (3, 3, 4.5, true, ST_GeomFromText('POINT(75.7833 26.9054)', 4326)),
-(4, 4, 4.8, false, ST_GeomFromText('POINT(75.8017 26.9159)', 4326)),
+(4, 4, 4.8, true, ST_GeomFromText('POINT(75.8017 26.9159)', 4326)),
 (5, 5, 4.6, true, ST_GeomFromText('POINT(75.7778 26.9101)', 4326)),
 (6, 6, 4.9, true, ST_GeomFromText('POINT(75.7990 26.9210)', 4326)),
-(7, 7, 4.4, false, ST_GeomFromText('POINT(75.7854 26.9223)', 4326)),
+(7, 7, 4.4, true, ST_GeomFromText('POINT(75.7854 26.9223)', 4326)),
 (8, 8, 4.7, true, ST_GeomFromText('POINT(75.7701 26.9005)', 4326)),
 (9, 9, 4.6, true, ST_GeomFromText('POINT(75.7921 26.9274)', 4326)),
-(10, 10, 4.5, false, ST_GeomFromText('POINT(75.8085 26.9136)', 4326));
+(10, 10, 4.5, true, ST_GeomFromText('POINT(75.8085 26.9136)', 4326));
 
 
