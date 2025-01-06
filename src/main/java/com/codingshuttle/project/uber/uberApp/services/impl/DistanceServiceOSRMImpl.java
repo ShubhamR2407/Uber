@@ -38,6 +38,6 @@ class OSRMResponseDto {
 }
 
 @Data
-class OSRMDistance {
+class  OSRMDistance {
     private Double distance;
 }
