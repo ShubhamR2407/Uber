@@ -18,7 +18,6 @@ import org.springframework.transaction.annotation.Transactional;
 public class WalletPaymentStrategy implements PaymentStrategy {
 
     private final WalletService walletService;
-    private final PaymentService paymentService;
 
     @Override
     @Transactional
@@ -45,7 +44,5 @@ public class WalletPaymentStrategy implements PaymentStrategy {
                 payment.getRide(),
                 TransactionMethod.RIDE
         );
-
-        paymentService.updatePaymentStatus(payment, PaymentStatus.CONFIRMED);
     }
 }

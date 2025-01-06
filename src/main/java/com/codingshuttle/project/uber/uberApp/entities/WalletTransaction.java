@@ -3,12 +3,16 @@ package com.codingshuttle.project.uber.uberApp.entities;
 import com.codingshuttle.project.uber.uberApp.entities.enums.TransactionMethod;
 import com.codingshuttle.project.uber.uberApp.entities.enums.TransactionType;
 import jakarta.persistence.*;
-import lombok.Builder;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
 @Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
 public class WalletTransaction {
 

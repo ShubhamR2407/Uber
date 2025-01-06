@@ -91,8 +91,7 @@ public class DriverServiceImpl implements DriverService {
         }
 
         ride.setStartedAt(LocalDateTime.now());
-        ride.setRideStatus(RideStatus.ONGOING); // Added by me
-        Ride savedRide = rideService.updateRideStatus(ride, RideStatus.CONFIRMED);
+        Ride savedRide = rideService.updateRideStatus(ride, RideStatus.ONGOING);
 
         paymentService.createNewPayment(savedRide);
 

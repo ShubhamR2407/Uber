@@ -22,6 +22,7 @@ public class PaymentServiceImpl implements PaymentService {
         Payment payment = paymentRepository.findByRide(ride)
                         .orElseThrow(() -> new ResourceNotFoundException("Payment not found for ride: "+ ride.getId()));
         paymentStrategyManager.paymentStrategy(payment.getPaymentMethod()).processPayment(payment);
+        updatePaymentStatus(payment, PaymentStatus.CONFIRMED);
     }
 
     @Override
@@ -35,7 +36,6 @@ public class PaymentServiceImpl implements PaymentService {
         return paymentRepository.save(payment);
     }
 
-    @Override
     public void updatePaymentStatus(Payment payment, PaymentStatus paymentStatus) {
         payment.setPaymentStatus(paymentStatus);
         paymentRepository.save(payment);
