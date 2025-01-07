@@ -54,9 +54,9 @@ public class WalletServiceImpl implements WalletService {
                 .amount(amount)
                 .wallet(wallet)
                 .build();
-//        walletTransactionService.createNewWalletTransaction(walletTransaction);
 
-        wallet.getTransactions().add(walletTransaction);
+        walletTransactionService.createNewWalletTransaction(walletTransaction);
+
         return walletRepository.save(wallet);
     }
 
